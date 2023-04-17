@@ -4,12 +4,16 @@
     {
         static void Main(string[] args)
         {
-            var celsius = TempConverter.FahrenheitToCelsius(68); //20
-            var fahrenheit = TempConverter.CelsiusToFahrenheit(20); //68
+            Console.WriteLine("What is the temperature in F you want to convert?");
+            double fahTemp = Convert.ToDouble(Console.ReadLine());
+            var convertedToCel = TempConverter.FahrenheitToCelsius(fahTemp);
 
-            Console.WriteLine("After conversion");
-            Console.WriteLine($"celsius {celsius}");
-            Console.WriteLine($"fahrenheit {fahrenheit}");
-        }
+            Console.WriteLine($"That equals {convertedToCel} degrees Celsius\n");
+
+            Console.WriteLine("What is the temperature in C you want to convert?");
+            var celTemp = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"That equals {TempConverter.CelsiusToFahrenheit(celTemp)} degress Fahrenheit"); 
+        }            
     }
 }

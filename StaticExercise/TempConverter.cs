@@ -3,16 +3,17 @@ namespace StaticExercise
 {
 	public static class TempConverter
 	{
-		public static double FahrenheitToCelsius(double fahrenheit)
+		public static double FahrenheitToCelsius(double fTemp)
 		{
-			var result = (fahrenheit - 32) / 1.8;
+			//Please Excuse My Dear Aunt Sally
+			var celTemp = Math.Round((fTemp - 32) * (5 / 9), 4);
 
-			return result;
+			return celTemp;
 		}
 
-		public static double CelsiusToFahrenheit(double celsius)
+		public static double CelsiusToFahrenheit(double celTemp)
 		{
-			return (celsius * 9) / 5 + 32;
+			return Math.Round(celTemp * (9 / 5) + 32, 2);
 		}
 	}
 
